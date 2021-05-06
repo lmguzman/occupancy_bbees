@@ -1,0 +1,19 @@
+model
+{
+    for (yr in 1:nyr) {
+        alpha_psi[yr] ~ dnorm(0.00000E+00, 0.01)
+        alpha_p[yr] ~ dnorm(0.00000E+00, 0.01)
+        b_lp_samp[yr] ~ dnorm(0.00000E+00, 0.1)
+        for (site in 1:nsite) {
+            logit(psi[site, yr]) <- alpha_psi[yr]
+            Z[site, yr] ~ dbern(psi[site, yr])
+            for (visit in 1:nvisit) {
+                logit(p[site, yr, visit]) <- alpha_p[yr] + b_lp_samp[yr] * 
+                  sampmat[site, yr, visit]
+                mu_p[site, yr, visit] <- Z[site, yr] * p[site, 
+                  yr, visit]
+                X[site, yr, visit] ~ dbern(mu_p[site, yr, visit])
+            }
+        }
+    }
+}

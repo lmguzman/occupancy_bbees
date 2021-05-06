@@ -1,0 +1,35 @@
+Because of previous agreements between Soroye et al. (2020) and the data providers, we direct researchers to Soroye et al. for access to those data for further analyses and here we provide an explanation on how to get the data needed to run this re-analysis. 
+
+Explanation of how to get this data:
+
+1. First download the following repository:
+https://figshare.com/articles/dataset/Climate_change_contributes_to_widespread_declines_among_bumble_bees_across_continents_-_DATA_REPOSITORY/9956471
+
+2. Intermediate directories are missing, therefore you will need to create the intermediate directories for the scripts to run. See below for a list of the main directories that you will need. We have also created an Rscript "creates_directories.R" that generates the directories and subdirectories needed. 
+
+3. Run scripts 1 to 7.
+
+4. From the outputs of scripts 1 to 7 you will need the following files here:
+- bombus_clean.RDS found in directory 1_Cleandata_and_makeMCPs
+- bombus_continent.RDS found in 3_CalcSamplingEffort_Cont
+- bombus_err_obs.csv found in 0_data
+- dataOccu.RDS found in 7_shapeOccudata
+
+
+Main directories you will need:
+
+0_ClimateData
+0_data
+0_ExposureIndexdata
+0_LanduseData
+1_Cleandata_and_makeMCPs
+2_CalcSpeciesPr_Rich
+3_CalcSamplingEffort_Cont
+4_CalcClim_andExposure
+5_binomialGLMM4Presence
+6_ModelRawSpRich
+7_shapeOccudata
+8_ModelOccupancy
+9_modelOccupancy2CEI
+10_modelOccupancyRichness
+ClimaticPositionIndex

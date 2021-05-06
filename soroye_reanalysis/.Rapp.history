@@ -1,0 +1,659 @@
+dd <- data.frame(number=c(10,11,5,3,77,5,55,99),#
+                 id=c('Jan1-s1',#
+                      'Jan2-s1',#
+                      'Jan1-s2',#
+                      'Jan1-s2',#
+                      'Jan2-s2',#
+                      'Jan1-s1',#
+                      'Jan2-s2',#
+                      'Jan2-s2'))#
+#
+num.by.id <- split(dd$number, dd$id)
+num.by.id
+sum(num.by.id[[1]])#
+sum(num.by.id[[2]])
+## do one at a time#
+sum(num.by.id[[1]])#
+sum(num.by.id[[2]])#
+#
+## do all at once, using an apply statement#
+sapply(num.by.id, sum)
+total.num <- sapply(num.by.id, sum)
+total.num
+num.by.id
+length(num.by.id)
+total.num <- rep(NA, length(num.by.id))
+total.num
+length(num.by.id)
+total.num <- rep(NA, length(num.by.id))#
+for(i in 1:length(num.by.id)) {#
+  total.num[i] <- num.by.id[[i]]#
+}
+total.num <- rep(NA, length(num.by.id))#
+for(i in 1:length(num.by.id)) {#
+  total.num[i] <- sum(num.by.id[[i]])#
+}
+total.num
+total.num <- sapply(num.by.id, function(x) sum(x^2))
+sapply(num.by.id, function(x) sum(x^2))
+dd
+## do all at once, using an apply statement#
+total.num <- sapply(num.by.id, sum)
+total.num
+sapply(dd$total.num, function(x) x^2)
+sapply(dd$number, function(x) x^2)
+dd$number
+dd$number_squared <- sapply(dd$number, function(x) x^2)
+dd
+dd[,'number_squared']
+dd$number_squared
+mm <- matrix(1:4, nrow=2, ncol=2)
+mm
+dimnames(mm) <- list(mum=c('A','B'), dad=c('X','Y'))
+mm
+mm[,'Y']
+mm$Y
+dd
+c(1,3,4)
+dd[c(1,3,4),'number_squared']
+dd$number_squared
+dd$number_squared[c(1,3,4)]
+80/0.71*0.87
+3126.01+ #vancity#
+-1337.87+ #rogers#
+-0+ #mbna#
+-74+ #(may 11) hydro#
+-875
+matrix(1:5, ncol=5, nrow=1)
+matrix(1:2, ncol=2, nrow=1)
+layout(matrix(1:2, ncol=2, nrow=1))#
+plot(1:10)#
+plot(1:10)
+layout(matrix(1:2, ncol=1, nrow=2))#
+plot(1:10)#
+plot(1:10)
+matrix(c(1,2,#
+         0,2),#
+       ncol=2, nrow=2)
+m <- matrix(c(1,0,2,2),#
+            ncol=2, nrow=2)#
+m
+layout(m)#
+plot(1:10)#
+plot(1:10)
+m <- matrix(c(1,1,0,#
+              0,2,2,#
+              3,0,0),#
+            ncol=3, nrow=3)#
+m
+layout(m)#
+plot(1:10)#
+plot(1:10)#
+plot(1:10)
+m <- matrix(c(1,1,0,#
+              0,2,2,#
+              3,0,0),#
+            ncol=3, nrow=3,byrow=TRUE)#
+m
+layout(m)#
+plot(1:10)#
+plot(1:10)#
+plot(1:10)
+?layout
+layout(m,#
+       widths=c(0.1,1,1),#
+       heights=c(1,1,2))#
+plot(1:10)#
+plot(1:10)#
+plot(1:10)
+layout(m,#
+       widths=c(0.5,1,1),#
+       heights=c(1,1,2))#
+plot(1:10)#
+plot(1:10)#
+plot(1:10)
+matrix(1:2,nrow=1,ncol=2)
+layout(matrix(1:2,nrow=1,ncol=2))#
+plot(1:10)#
+plot(1:10)
+layout(matrix(1:2,nrow=1,ncol=2))#
+par(oma=c(2,1,0.1,0.1), mar=c(0.5, 0.5, 0.5, 0.5),#
+    mgp=c(1,0.1,0))#
+plot(1:10)#
+plot(1:10)
+layout(matrix(1:2,nrow=1,ncol=2))#
+par(oma=c(4,1,0.1,0.1), mar=c(0.5, 0.5, 0.5, 0.5),#
+    mgp=c(1,0.1,0))#
+plot(1:10)#
+plot(1:10)
+layout(matrix(1:2,nrow=1,ncol=2))#
+par(oma=c(4,2,0.1,0.1), mar=c(0.5, 0.5, 0.5, 0.5),#
+    mgp=c(1,0.1,0))#
+plot(1:10)#
+plot(1:10)
+layout(matrix(1:2,nrow=1,ncol=2))#
+par(oma=c(4,2,0.1,0.1), mar=c(0.5, 0.5, 0.5, 0.5),#
+    mgp=c(2,0.1,0))#
+plot(1:10)#
+plot(1:10)
+layout(matrix(1:2,nrow=1,ncol=2))#
+par(oma=c(4,2,0.1,0.1), mar=c(0.5, 0.5, 0.5, 0.5),#
+    mgp=c(2,1,0))#
+plot(1:10)#
+plot(1:10)
+layout(matrix(1:2,nrow=1,ncol=2))#
+par(oma=c(4,2,0.1,0.1), mar=c(0.5, 0.5, 0.5, 0.5),#
+    mgp=c(2,1,0))#
+plot(1:10,las=1)#
+plot(1:10,las=1)
+layout(matrix(1:2,nrow=1,ncol=2))#
+par(oma=c(4,2,0.1,0.1), mar=c(0.5, 0.5, 0.5, 1.5),#
+    mgp=c(2,1,0))#
+plot(1:10,las=1)#
+plot(1:10,las=1)
+?par
+230*40*52
+1200/50
+13500-11860
+1200/0.71
+1200/0.71*0.03
+59*0.75
+85*0.75
+36/0.71
+157.55+122.87-50
+m <- matrix(c(0,rep(1,5),0,rep(2,5),0,rep(3,5),#
+              4,0,5,0,6,0,7,0,8,0,9,0,10,0,11,0,12),#
+            ncol=18, nrow=2,byrow=TRUE)#
+m
+m <- matrix(c(0,rep(1,5),0,rep(2,5),0,rep(3,5),0,#
+              4,0,5,0,6,0,7,0,8,0,9,0,10,0,11,0,12),#
+            ncol=18, nrow=2,byrow=TRUE)#
+m
+m <- matrix(c(0,rep(1,5),0,rep(2,5),0,rep(3,5),0,#
+              4,0,5,0,6,0,7,0,8,0,9,0,10,0,11,0,12),#
+            ncol=18, nrow=2,byrow=TRUE)#
+m#
+#
+layout(m,#
+       widths=rep(1,18),#
+       heights=c(1,0.2))#
+for(1 in 1:12)#
+plot(1:10)
+m <- matrix(c(0,rep(1,5),0,rep(2,5),0,rep(3,5),0,#
+              4,0,5,0,6,0,7,0,8,0,9,0,10,0,11,0,12),#
+            ncol=18, nrow=2,byrow=TRUE)#
+m#
+#
+layout(m,#
+       widths=rep(1,18),#
+       heights=c(1,0.2))#
+for(i in 1:12)#
+  plot(1:10)
+m <- matrix(c(0,rep(1,5),0,rep(2,5),0,rep(3,5),0,#
+              4,0,5,0,6,0,7,0,8,0,9,0,10,0,11,0,12),#
+            ncol=18, nrow=2,byrow=TRUE)#
+m#
+#
+layout(m,#
+       widths=rep(1,18),#
+       heights=c(1,0.3))#
+for(i in 1:12)#
+  plot(1:10)
+layout(m,#
+       widths=rep(1,18),#
+       heights=c(1,0.3))#
+par(oma=c(4,2,0.1,0.1), mar=c(0.5, 0.5, 0.5, 1.5),#
+    mgp=c(2,1,0))#
+for(i in 1:12)#
+  plot(1:10)
+m <- matrix(c(0,rep(1,5),0,rep(2,5),0,rep(3,5),0,#
+              4,0,5,0,6,0,7,0,8,0,9,0,10,0,11,0,12),#
+            ncol=18, nrow=2,byrow=TRUE)#
+m#
+#
+layout(m,#
+       widths=rep(1,18),#
+       heights=c(1,0.3))#
+par(oma=c(4,2,0.1,0.1), mar=c(0.5, 0.5, 0.5, 1.5),#
+    mgp=c(2,1,0))#
+for(i in 1:12)#
+  plot(1:10, xaxt='n', yaxt='n', xlab='', ylab='')
+m <- matrix(c(0,rep(1,5),0,rep(2,5),0,rep(3,5),0,#
+              0,rep(4,5),0,rep(5,5),0,rep(6,5),0,#
+              7,0,8,0,9,0,19,0,11,0,12,0,13,0,14,0,15),#
+            ncol=18, nrow=2,byrow=TRUE)#
+m#
+#
+layout(m,#
+       widths=rep(1,18),#
+       heights=c(1,0.3))#
+par(oma=c(4,2,0.1,0.1), mar=c(0.5, 0.5, 0.5, 1.5),#
+    mgp=c(2,1,0))#
+for(i in 1:12)#
+  plot(1:10, xaxt='n', yaxt='n', xlab='', ylab='')
+m <- matrix(c(0,rep(1,5),0,rep(2,5),0,rep(3,5),0,#
+              0,rep(4,5),0,rep(5,5),0,rep(6,5),0,#
+              7,0,8,0,9,0,19,0,11,0,12,0,13,0,14,0,15),#
+            ncol=18, nrow=3,byrow=TRUE)#
+m#
+#
+layout(m,#
+       widths=rep(1,18),#
+       heights=c(1,1,0.5))#
+par(oma=c(4,2,0.1,0.1), mar=c(0.5, 0.5, 0.5, 1.5),#
+    mgp=c(2,1,0))#
+for(i in 1:12)#
+  plot(1:10, xaxt='n', yaxt='n', xlab='', ylab='')
+m <- matrix(c(0,rep(1,5),0,rep(2,5),0,rep(3,5),0,#
+              0,rep(4,5),0,rep(5,5),0,rep(6,5),0,#
+              7,0,8,0,9,0,19,0,11,0,12,0,13,0,14,0,15),#
+            ncol=18, nrow=3,byrow=TRUE)#
+m
+m <- matrix(c(0,rep(1,5),0,rep(2,5),0,rep(3,5),0,#
+              0,rep(4,5),0,rep(5,5),0,rep(6,5),0,#
+              7,0,8,0,9,0,19,0,11,0,12,0,13,0,14,0,15),#
+            ncol=19, nrow=3,byrow=TRUE)#
+m
+m <- matrix(c(0,rep(1,3),0,rep(2,3),0,rep(3,3),0,#
+              0,rep(4,3),0,rep(5,3),0,rep(6,3),0,#
+              7,8,9,19,11,12,13,14,15),#
+            ncol=19, nrow=3,byrow=TRUE)#
+m
+m <- matrix(c(0,rep(1,3),0,rep(2,3),0,rep(3,3),0,#
+              0,rep(4,3),0,rep(5,3),0,rep(6,3),0,#
+              7,8,9,19,11,12,13,14,15),#
+            ncol=13, nrow=3,byrow=TRUE)#
+m
+m <- matrix(c(0,rep(1,3),0,rep(2,3),0,rep(3,3),0,#
+              0,rep(4,3),0,rep(5,3),0,rep(6,3),0,#
+              7,0,8,0,9,10,0,11,0,12,13,0,14,0,15),#
+            ncol=13, nrow=3,byrow=TRUE)#
+m
+m <- matrix(c(0,rep(1,3),0,0,rep(2,3),0,0,rep(3,3),0,#
+              0,rep(4,3),0,0,rep(5,3),0,0,rep(6,3),0,#
+              7,0,8,0,9,10,0,11,0,12,13,0,14,0,15),#
+            ncol=13, nrow=3,byrow=TRUE)#
+m#
+#
+layout(m,#
+       widths=rep(1,12),#
+       heights=c(1,1,0.5))#
+par(oma=c(4,2,0.1,0.1), mar=c(0.5, 0.5, 0.5, 1.5),#
+    mgp=c(2,1,0))#
+for(i in 1:12)#
+  plot(1:10, xaxt='n', yaxt='n', xlab='', ylab='')
+m <- matrix(c(0,rep(1,3),0,0,rep(2,3),0,0,rep(3,3),0,#
+              0,rep(4,3),0,0,rep(5,3),0,0,rep(6,3),0,#
+              7,0,8,0,9,10,0,11,0,12,13,0,14,0,15),#
+            ncol=13, nrow=3,byrow=TRUE)#
+m#
+#
+layout(m,#
+       widths=rep(1,12),#
+       heights=c(1,1,0.5))#
+par(oma=c(4,2,0.1,0.1), mar=c(0.5, 0.5, 0.5, 1.5),#
+    mgp=c(2,1,0))#
+for(i in 1:15)#
+  plot(1:10, xaxt='n', yaxt='n', xlab='', ylab='')
+m
+m <- matrix(c(0,rep(1,3),0,0,rep(2,3),0,0,rep(3,3),0,#
+              0,rep(4,3),0,0,rep(5,3),0,0,rep(6,3),0,#
+              7,0,8,0,9,10,0,11,0,12,13,0,14,0,15),#
+            ncol=15, nrow=3,byrow=TRUE)#
+m
+layout(m,#
+       widths=rep(1,12),#
+       heights=c(1,1,0.5))#
+par(oma=c(4,2,0.1,0.1), mar=c(0.5, 0.5, 0.5, 1.5),#
+    mgp=c(2,1,0))#
+for(i in 1:15)#
+  plot(1:10, xaxt='n', yaxt='n', xlab='', ylab='')
+106/0.71
+49.60*0.71
+135*0.71
+135*0.71*1.12
+6.5+8.5+7+6+3
+177500+233091+20000+12500
+?poly
+poly(1:10,2)
+poly(1:10,2)[,1]
+6*12
+134.99*1.12-130
+1828-1731
+3113.12+ #vancity#
+-98+ #rogers (pay 1721.31)#
+-0+ #mbna#
+-875+ #(may 28)#
+-445
+20636+3500+ #saved#
+2613.12+ #vancity#
+-98+ #rogers (pay 1721.31)#
+-0+ #mbna#
+-875+ #(may 28)#
+-445
+20636+3500+ #saved#
+2613.12+ #vancity#
+-98+ #rogers (pay 1721.31)#
+-0+ #mbna#
+-875+ #(may 28)#
+-445+ #(june 1)#
+2800+ #(june 5)#
+-875+ #(june 11)#
+2800+ #(june 19)#
+-875+ #(june 25)#
+-445+ #(july 1)#
+-21535.36+ #Payment 2 (july 1)#
+2800+ #(july 3)#
+-875+ #(july 9)#
+2800+ #(july 17)#
+-875+ #(july 23)#
+2800+ #(july 31)#
+-445+ #(august 1)#
+-875+ #(august 6)#
+2800+ #(august 14)#
+-875+ #(august 20)#
+2800+ #(august 28)#
+-445+ #(september 1)#
+-21535.36 #Payment 3 (september 1)
+20636+3500+ 21535.36
+20636+3500+ 21535.36+4000
+39/25
+39/28
+36/25
+36/28
+36/39
+plot(1:10)
+text(x=1, y=2, expression(""~sigma[m]~""), adj=0, cex=0.7)
+plot(NA, xlim=c(0,3), ylim=c(0,3))#
+symbols.to.plot <- c(expression(''~sigma[m]~''),#
+                     expression(''~sigma[f]~''))#
+text(x=1, y=2, symbols.to.plot[1], adj=0, cex=0.7)#
+text(x=2, y=2, symbols.to.plot[2], adj=0, cex=0.7)
+0.5/4
+chain1 <- read.table('~/Desktop/tmp/sim.1/CODAchain1.txt')
+head(chain1)
+chain1.info <- read.table('~/Desktop/tmp/sim.1/CODAindex.txt')
+dim(chain1)
+dim(chain1.info)
+head(chain1.info)
+vars <- rep(chain1.info[,1],each=1000)
+vars
+vars <- as.character(rep(chain1.info[,1],each=1000))
+vars
+chain1
+chain1 <- read.table('~/Desktop/tmp/sim.1/CODAchain1.txt')#
+chain2 <- read.table('~/Desktop/tmp/sim.1/CODAchain2.txt')#
+chain3 <- read.table('~/Desktop/tmp/sim.1/CODAchain3.txt')#
+chain1.info <- read.table('~/Desktop/tmp/sim.1/CODAindex.txt')#
+vars <- as.character(rep(chain1.info[,1],each=1000))
+library('abind')#
+library('rjags')#
+library('R2jags')#
+library('runjags')#
+library('R2WinBUGS')#
+library('parallel')#
+#
+chain1 <- read.table('~/Desktop/tmp/sim.1/CODAchain1.txt')#
+chain2 <- read.table('~/Desktop/tmp/sim.2/CODAchain1.txt')#
+chain3 <- read.table('~/Desktop/tmp/sim.3/CODAchain1.txt')#
+chain1.info <- read.table('~/Desktop/tmp/sim.1/CODAindex.txt')#
+vars <- as.character(rep(chain1.info[,1],each=1000))
+sims <- cbind(chain1, chain2, chain3)#
+rownames(sims) <- vars
+library('abind')#
+library('rjags')#
+library('R2jags')#
+library('runjags')#
+library('R2WinBUGS')#
+library('parallel')#
+#
+chain1 <- read.table('~/Desktop/tmp/sim.1/CODAchain1.txt')#
+chain2 <- read.table('~/Desktop/tmp/sim.2/CODAchain1.txt')#
+chain3 <- read.table('~/Desktop/tmp/sim.3/CODAchain1.txt')#
+chain1.info <- read.table('~/Desktop/tmp/sim.1/CODAindex.txt')#
+vars <- as.character(rep(chain1.info[,1],each=1000))#
+#
+sims <- cbind(chain1, chain2, chain3)
+sims[vars=='mu.psi[1]',]
+vars=='mu.psi[1]'
+which(vars=='mu.psi[1]')
+sum(vars=='mu.psi[1]')
+library('abind')#
+library('rjags')#
+library('R2jags')#
+library('runjags')#
+library('R2WinBUGS')#
+library('parallel')#
+#
+chain1 <- read.table('~/Desktop/tmp/sim.1/CODAchain1.txt')#
+chain2 <- read.table('~/Desktop/tmp/sim.2/CODAchain1.txt')#
+chain3 <- read.table('~/Desktop/tmp/sim.3/CODAchain1.txt')#
+chain1.info <- read.table('~/Desktop/tmp/sim.1/CODAindex.txt')#
+vars <- as.character(rep(chain1.info[,1],each=1000))#
+#
+sims <- cbind(chain1, chain2, chain3)
+dim(sims)
+chain1
+sims <- cbind(chain1[,2], chain2[,2], chain3[,2])#
+#
+sims[vars=='mu.psi[1]',]
+mean(sims[vars=='mu.psi[1]',])
+plot(1:4, col=brewer.pal(4, 'RdYlGn'), pch=16, cex=5)
+library(RColorBrewer)
+plot(1:4, col=brewer.pal(4, 'RdYlGn'), pch=16, cex=5)\
+plot(1:4, col=brewer.pal(4, 'RdYlGn'), pch=16, cex=5)
+y.vals <- sample(100, 1:10)
+y.vals
+y.vals <- sample(100, 1:10, replace=TRUE)
+y.vals
+?sample
+y.vals <- sample(1:10, size=100, replace=TRUE)
+y.vals
+plot(y.vals, cex=2, pch=16)
+col.vec <- rep('red', legnth(y.vals))
+col.vec <- rep('red', length(y.vals))
+col.vec
+col.vec[y.vals<5] <- 'green4'
+col.vec
+plot(y.vals, cex=2, pch=16, col=col.vec)
+reshape
+?reshape
+379-344
+66
+36+35
+4322*1.05
+61/24
+59*0.75
+readRDS('~/Documents/projects/bumble-bee-declines/soroye-all-sp/7_shapeOccudata/dataOccu.RDS')
+dir_sampling
+readRDS(~/Documents/projects/bumble-bee-declines/OccupancyModelingEffectofCEI/7_shapeOccudata/dataOccu.RDS)
+readRDS('~/Documents/projects/bumble-bee-declines/OccupancyModelingEffectofCEI/7_shapeOccudata/dataOccu.RDS')
+x<-readRDS('~/Documents/projects/bumble-bee-declines/OccupancyModelingEffectofCEI/7_shapeOccudata/dataOccu.RDS')
+x[[length(x)]]
+x[[length(x)]][['continent']
+]
+x[[length(x)]][['continent']]
+length(x[[length(x)]][['continent']])
+200*6/60
+seq(0, 0.8, length.out = 200);plot(x + 1, exp(x));abline(a = 0, b = 1)
+x <- seq(0, 0.8, length.out = 200);plot(x + 1, exp(x));abline(a = 0, b = 1)
+load('~/Dropbox/occ_relevant_sites/soroye/data/peter/for_model/ranges.RData')
+load('~/Dropbox/occ_relevant_sites/soroye/data/peter/for_model/ranges.RData', verbose=T)
+ranges
+matrix(c(1,2,3, 4,5,6, 0,0,0, 7,8,9,#
+              10,11,12),#
+ncol=3, nrow=5,byrow=TRUE)
+c(rep(1,6),rep(0.05,3) ,rep(1,6))
+13500-12722
+20641+3500+ #saved#
+1293.21+ #vancity#
+-778+ #rogers#
+-0+ #mbna#
+2805+ #(june 5)#
+-507.36+ # property taxes#
+-875+ #(june 11)#
+2800+ #(june 19)#
+-875+ #(june 25)#
+-445+ #(july 1)#
+-21535.36+ #Payment 2 (july 1)#
+2800+ #(july 3)#
+-875+ #(july 9)#
+2800+ #(july 17)#
+-875+ #(july 23)#
+2800+ #(july 31)#
+-445+ #(august 1)#
+-875+ #(august 6)#
+2800+ #(august 14)#
+-875+ #(august 20)#
+2800+ #(august 28)#
+-445+ #(september 1)#
+-21535.36 #Payment 3 (september 1)
+500/60
+500/60*10
+3600*0.75
+85/0.71*0.05
+85/0.71*0.05+9.95
+542/24
+19*3*100
+?environment
+13*0.6
+13*0.6*4
+379-343
+270*0.6*0.73
+160*0.6*0.73
+180*0.6*1.12
+200*0.6*1.12
+13*0.6
+260*0.6*0.73*1.12
+3598+4334
+120/0.735
+13500-11709
+20641+3500+ #saved#
+2635+ #vancity#
+-1791+ #rogers#
+-233+ #mbna#
+-875+ #(june 11)#
+2800+ #(june 19)#
+-875+ #(june 25)#
+-445+ #(july 1)#
+-21535.36
+20641+3500+ #saved#
+2635+ #vancity#
+-1791+ #rogers#
+-233+ #mbna#
+-875+ #(june 11)#
+2800+ #(june 19)#
+-875+ #(june 25)#
+-445+ #(july 1)#
+-21535.36+ #Payment 2 (july 1)#
+2800+ #(july 3)#
+-875+ #(july 9)#
+2800+ #(july 17)#
+-875+ #(july 23)#
+2800+ #(july 31)#
+-445+ #(august 1)#
+-875+ #(august 6)#
+2800+ #(august 14)#
+-875+ #(august 20)#
+2800+ #(august 28)#
+-445+ #(september 1)#
+-21535.36
+1/(0.9)
+## data prep:#
+#
+## setwd('~/Dropbox (Personal)/occ_relevant_sites/soroye')#
+rm(list=ls())#
+setwd('~/Dropbox/occ_relevant_sites/soroye')#
+#
+data.dir <- 'data/peter'#
+## data.dir <- 'data/melissa'#
+#
+library(parallel)#
+library(raster)#
+#
+## -------------------------------------------------------------------#
+## load and collate Peter's data - eventually we will replace this#
+## with our own data which we load from the originals and clean up#
+## there#
+dataOccu <- readRDS(file.path(data.dir, 'original/dataOccu.RDS'))
+names(dataOccu)
+head(dataOccu)
+## data prep:#
+#
+setwd('~/Dropbox/occ_relevant_sites/soroye')#
+library(maptools)#
+library(parallel)#
+library(raster)#
+library(rgdal)#
+library(rgeos)#
+library(sp)#
+library(spatstat)#
+#
+data.dir <- 'data/peter'#
+## data.dir <- 'data/melissa'#
+#
+geo.prj <- "+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0" #
+#
+## ------------------------------------------------------------#
+## load raster data and convert to polygons#
+continent <- readRDS(file.path(data.dir, 'original/bombus_continent.RDS'))#
+projection(continent)#
+dd.sites <- rasterToPolygons(continent)#
+names(dd.sites@data) <- 'continent'#
+dd.sites@data$quadID <- which(!is.na(values(continent)))#
+dd.sites@data$continent <- c('AM','EU')[dd.sites@data$continent]#
+## ------------------------------------------------------------#
+#
+## ------------------------------------------------------------#
+## load bumble bee data#
+data.original <- readRDS(file.path(data.dir, 'original/bombus_clean.RDS'))
+dim(data.original)
+head(data.original)
+table(data.original$timeperiod)
+297022/260600
+sapply(split(data.original%year_, data.original$timeperiod),unique)
+split(data.original%year_, data.original$timeperiod)
+split(data.original[,'year_'], data.original$timeperiod)
+sapply(split(data.original[,'year_'], data.original$timeperiod),unique)
+setwd('~/Dropbox/occ_relevant_sites/soroye')#
+rm(list=ls())#
+source('src/initialize.R')#
+#
+## load data#
+load('data/peter/for_model/occ.data.RData', verbose=TRUE)
+data.orig <- readRDS('data/original/bombus_ogdata.RDS')
+dim(data.orig)
+head(data.orig)
+yy <- data.orig[,'year_']
+sum(yy>1900 & yy<=1975)
+sum(yy>1900)
+data.orig <- data.orig[!is.na(data.orig[,'year_']),]#
+sum(yy>1900 & yy<=1975)
+setwd('~/Dropbox/occ_relevant_sites/soroye')#
+rm(list=ls())#
+source('src/initialize.R')#
+#
+## load data#
+load('data/peter/for_model/occ.data.RData', verbose=TRUE)#
+#
+data.orig <- readRDS('data/original/bombus_ogdata.RDS')
+dim(data.orig)
+head(data.orig)
+tail(data.orig)
+yy[1]
+yy <- data.orig[,'year_']
+yy[1]
+yy[1]<2000
+yy <- data.orig[,'year_']
+yy
+table(yy)
+length(yy)
+yy <- yy[!is.na(yy)]
+length(yy)
+sum(yy>1900 & yy<=1975)
+sum(yy>=2000 & yy<=2015)
+sum(yy>=2000 & yy<=2014)
+1974-1901
+1974-1900
+sum(yy>=1901 & yy<=1974)#
+sum(yy>=2000 & yy<=2014)
