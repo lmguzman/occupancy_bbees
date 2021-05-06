@@ -1,0 +1,18 @@
+model
+{
+    psi.sp ~ dnorm(0.00000E+00, 0.01)
+    p.sp ~ dnorm(0.00000E+00, 0.01)
+    psi.yr ~ dnorm(0.00000E+00, 0.01)
+    p.yr ~ dnorm(0.00000E+00, 0.01)
+    for (yr in 1:nyr) {
+        logit(psi[yr]) <- psi.sp + psi.yr * (yr - 1)
+        logit(p[yr]) <- p.sp + p.yr * (yr - 1)
+        for (site in 1:nsite) {
+            Z[site, yr] ~ dbern(psi[yr])
+        }
+    }
+    for (ind in 1:nind) {
+        p.eff[ind] <- Z[site[ind], yr[ind]] * p[yr[ind]]
+        X[ind] ~ dbern(p.eff[ind])
+    }
+}
